@@ -1,0 +1,3 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=398
+
+This is a vim syntax file for the Maxima programming language. Maxima (based on GNU Common Lisp) is a GNU licensed system for doing computer algebra. It is an outgrowth of MIT's original Macsyma implementation.
