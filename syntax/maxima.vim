@@ -2,7 +2,7 @@
 " Language:	MAXIMA
 " Maintainer:  	Michael M. Tung <michael.tung@uv.es>,
 "               Ismael Urraca Piedra <iurraca@yahoo.es>
-" Last Change:	Tue Aug 20 14:30:05 CEST 2002
+" Last Change:	Tue Aug 30 13:05:05 CEST 2002
 
 " First public release based on the syntax specifications in
 " the 'Maxima Manual'. Maxima was initially designed by
@@ -243,6 +243,17 @@ syn match   maximaNumber		"\<\d\+\.\d*\>"
 syn match   maximaNumber		"\.\d\+\>"
 syn match   maximaNumber		"-\.\d\+\>" contains=Number
 syn match   maximaNumber		"-\d\+\>" contains=Number
+
+" floating point number, without a decimal point
+"syn match maximaNumber	display "\<\d\+[de][-+]\=\d\+\(_\a\w*\)\=\>"
+
+" floating point number, starting with a decimal point
+syn match maximaNumber   display "\.\d\+\([de][-+]\=\d\+\)\=\(_\a\w*\)\=\>"
+
+" floating point number, no digits after decimal
+syn match maximaNumber   display "\<\d\+\.\([de][-+]\=\d\+\)\=\(_\a\w*\)\=\>"
+
+
 
 " hi User Labels
 syn sync ccomment maximaComment minlines=10
